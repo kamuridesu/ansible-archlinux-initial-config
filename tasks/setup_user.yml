@@ -1,0 +1,26 @@
+---
+# create group wheel
+- name: Create group wheel
+  group:
+    name: wheel
+    state: present
+    system: yes
+
+# add wheel group to sudoers
+- name: Add wheel group to sudoers
+  lineinfile:
+    path: /etc/sudoers
+    regexp: '^%wheel'
+    line: '%wheel ALL=(ALL) ALL'
+    state: present
+
+# create user
+- name: Create user
+  user:
+    name: kamuri
+    state: present
+    group: wheel
+    home: /home/kamuri
+    shell: /bin/zsh
+    create_home: yes
+    password: changeme

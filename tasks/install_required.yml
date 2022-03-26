@@ -1,0 +1,44 @@
+---
+- name: Update system
+  community.general.pacman:
+    update-cache: yes
+    upgrade: yes
+
+
+- name: Install required packages
+  community.general.pacman:
+    name:
+      # Essential packages
+    - sudo
+    - xf86-video-intel
+    - openssh
+    - xorg
+    - xorg-server
+    - vim
+    - neovim
+    - xfce4
+    - xfce4-goodies
+    - lightdm
+    - lightdm-gtk-greeter
+    - base-devel
+    - yakuake
+    - zsh
+    - neofetch
+    # Devel packages
+    - git
+    - jdk-openjdk
+    - jre-openjdk
+    - gcc
+    - rustup
+    - python
+    - python-pip
+    - julia
+    - code
+    - nodejs
+    # DevOps packages
+    - terraform
+    - docker
+    - docker-compose
+    - kubectl
+    - helm
+    state: present

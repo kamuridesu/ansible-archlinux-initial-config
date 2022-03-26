@@ -1,0 +1,10 @@
+galaxy_info:
+  role_name: 'ansible-role-kamuarch'
+  author: 'kamuridesu'
+  description: "Provision archlinux kamurin"
+  galaxy_tags:
+    - "archlinux"
+  license: "MIT"
+  min_ansible_version: "2.10.8"
+  platforms:
+    - name: "ArchLinux"
