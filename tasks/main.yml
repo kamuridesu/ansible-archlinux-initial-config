@@ -1,0 +1,5 @@
+- include_tasks: install_required.yml
+
+- include_tasks: setup_user.yml
+
+- include_tasks: provision_keys.yml
